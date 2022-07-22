@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Work{% endblock %}{% block
+content %}
+<form method="POST">
+    <h3 align="center">Coronavirus plotting</h3>
+    <div class="form-group">
+        <label for="country">Country initials</label>
+        <input type="text" class="form-control" id="country" name="country" placeholder="Enter country initials">
+    </div>
+    <div class="form-group">
+        <select id="parameter" name="parameter">
+            <option value="deaths">Deaths</option>
+            <option value="confirmed">Confirmed cases</option>
+            <option value="people vaccinated">People vaccinated (>=1dose)</option>
+            <option value="icu">ICU</option>
+            <option value="recovered">Recovered</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Plot</button>
+
+</form>
+
+{% endblock %}
