@@ -1,0 +1,87 @@
+{% extends "base.html" %} {% block title %}Work{% endblock %}{% block
+content %}
+<style>
+    ::placeholder {
+        text-align: center;
+        color: white;
+    }
+    .textField {
+        width: 300px;
+        border: none;
+        font-size: 60;
+        text-align: center;
+        padding: 10px;
+        font-style: italic;
+    }
+
+    .header {
+        padding: 60px;
+        text-align: center;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        text-shadow:0 5px 0 #3B3B3B;
+    }
+    .subhead {
+        text-align: center;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        text-shadow:0 5px 0 #3B3B3B;
+    }
+    .inputField {
+        width: 300px;
+        text-align: center;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+
+     }
+    select {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+            }
+    .button {
+
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 300px;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+    }
+
+
+
+</style>
+
+<div class="header"><h1 style=font-size:100px>Corona-virus plotting </h1></div>
+
+<form method="POST">
+    <div class="subhead">
+        <h1 style=font-size:50px> <label for="country">Country initials</label> </h1>
+        <input type="text" class="textField" id="country" name="country" placeholder="Enter country initials">
+    </div>
+    <br>
+    <div class="subhead">
+        <h1 style=font-size:50px> <label for="country">Parameter</label> </h1>
+    </div>
+        <select  class="inputField"  id="parameter" name="parameter">
+            <option value="deaths">Deaths</option>
+            <option value="confirmed cases">Confirmed cases</option>
+            <option value="people vaccinated">People vaccinated (>=1dose)</option>
+            <option value="icu">ICU</option>
+            <option value="tests">Tests</option>
+        </select>
+    <br>
+    <div class="subhead">
+        <h1 style=font-size:40px> <label for="country">Plot</label> </h1>
+    </div>
+    <br>
+    <button type="submit" class="button btn btn-primary">Plot</button>
+
+</form>
+
+{% endblock %}
